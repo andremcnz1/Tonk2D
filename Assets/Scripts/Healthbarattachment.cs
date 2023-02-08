@@ -16,14 +16,8 @@ public class Healthbarattachment : MonoBehaviour
     }
 
     
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("test");
         if (collision.gameObject.name.Contains("Shell"))
         {
             TakeDamage(20);
