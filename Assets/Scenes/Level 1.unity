@@ -58958,7 +58958,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  healthBar: {fileID: 0}
+  healthBarPrefab: {fileID: 2612782670122359158, guid: ae667381585171a47803c9b4245b6e95, type: 3}
+  canvas: {fileID: 872089273}
 --- !u!114 &438683689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58975,7 +58976,7 @@ MonoBehaviour:
   speed: 0.3
   distanceBetween: 3
   BulletSpeed: 4
-  R35Bullet: {fileID: 0}
+  R35Bullet: {fileID: 7201381173989894463, guid: 9710b271b5f4b5c478bc37f1c44cccda, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -59459,7 +59460,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  healthBar: {fileID: 0}
+  healthBarPrefab: {fileID: 2612782670122359158, guid: ae667381585171a47803c9b4245b6e95, type: 3}
+  canvas: {fileID: 872089273}
 --- !u!1001 &1744792775
 PrefabInstance:
   m_ObjectHideFlags: 0
