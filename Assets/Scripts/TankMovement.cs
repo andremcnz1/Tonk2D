@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class TankMovement : MonoBehaviour
 {
-    public PlayerInfo info;
     public float RotationSpeed = 10.0f;
     public float Acceleration = 1.5f;
     public float Deceleration = 8.0f;
     public float MaxSpeed = 1.0f;
     public float TurretSpeed = 50.0f;
     public Transform Turret;
-
 
     private Vector3 CurrentSpeed;
     private float Rotation;
@@ -26,23 +24,9 @@ public class TankMovement : MonoBehaviour
 
     void Update()
     {
-        switch (info.playerType)
-        {
-            case PlayerType.Local:
-                MousePos = Input.mousePosition;
-                movement.x = Input.GetAxisRaw("Horizontal");
-                movement.y = Input.GetAxisRaw("Vertical");
-                break;
-            case PlayerType.EnemyAI:
-                break;
-            case PlayerType.AllyAI:
-                break;
-            case PlayerType.Enemy:
-                break;
-            default:
-                Debug.Log("Error, no such player type");
-                break;
-        }
+        MousePos = Input.mousePosition;
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
     }
 
     void FixedUpdate()
