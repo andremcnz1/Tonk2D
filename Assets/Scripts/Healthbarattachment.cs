@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class Healthbarattachment : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public healthbar healthBar;
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private GameObject healthBarPrefab;
+    [SerializeField] private GameObject canvas;
+
+    private healthbar healthBar;
 
     private int currentHealth;
+
+    private void Awake()
+    {
+        healthBar = Instantiate(healthBarPrefab, canvas.transform).GetComponent<healthbar>();
+    }
 
     void Start()
     {
@@ -15,16 +23,23 @@ public class Healthbarattachment : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    
+    private void Update()
+    {
+        healthBar.transform.position = gameObject.transform.position;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name.Contains("Shell"))
         {
-            TakeDamage(20);
+            if (collision.gameObject.GetComponent<bullet>().parent != gameObject)
+            {
+                TakeDamage(20);
+            }
         }
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);

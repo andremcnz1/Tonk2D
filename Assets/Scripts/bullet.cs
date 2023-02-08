@@ -7,7 +7,7 @@ public class bullet : MonoBehaviour
 {
     public GameObject BulletExplosion;
 
-    private GameObject parent;
+    public GameObject parent;
 
     public void SetParent(GameObject parent)
     {
