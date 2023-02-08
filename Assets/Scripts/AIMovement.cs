@@ -6,7 +6,7 @@ public class AIMovement : MonoBehaviour
 {
     public GameObject Player;
     public float speed;
-    private float distanceBetween;
+    public float distanceBetween;
     public float BulletSpeed = 4.0f;
     public GameObject R35Bullet;
 
