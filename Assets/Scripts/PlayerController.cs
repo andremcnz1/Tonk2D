@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float Deceleration = 8.0f;
     public float MaxSpeed = 1.0f;
     public float TurretSpeed = 50.0f;
-    public float BulletSpeed = 3.0f;
+    public float BulletSpeed = 4.0f;
     public Transform Turret;
 
     public Transform ShootingPosition;
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         Turret.rotation = Quaternion.RotateTowards(Turret.rotation, target, Time.deltaTime * TurretSpeed);
     }
 
-    private void Shoot()
+    public void Shoot()
     {
         GameObject Bullet = Instantiate(R35Bullet, ShootingPosition.position, ShootingPosition.rotation);
         Bullet.GetComponent<bullet>().SetParent(gameObject);
