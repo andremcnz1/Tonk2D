@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
     private void Shoot()
     {
         GameObject Bullet = Instantiate(R35Bullet, ShootingPosition.position, ShootingPosition.rotation);
+        Bullet.GetComponent<bullet>().SetParent(gameObject);
         Rigidbody2D rb = Bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(ShootingPosition.up * BulletSpeed, ForceMode2D.Impulse);
     }
