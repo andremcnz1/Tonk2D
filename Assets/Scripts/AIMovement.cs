@@ -6,7 +6,9 @@ public class AIMovement : MonoBehaviour
 {
     public GameObject Player;
     public float speed;
-    public float distanceBetween;
+    private float distanceBetween;
+    public float BulletSpeed = 4.0f;
+    public GameObject R35Bullet;
 
     private float distance;
     void Start()
@@ -14,7 +16,6 @@ public class AIMovement : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         distance = Vector2.Distance(transform.position, Player.transform.position);
@@ -26,6 +27,7 @@ public class AIMovement : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(this.transform.position, Player.transform.position, speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(Vector3.forward * (angle - 90.0f));
+
         }
       
 
