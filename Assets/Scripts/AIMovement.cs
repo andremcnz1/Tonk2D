@@ -6,6 +6,7 @@ public class AIMovement : MonoBehaviour
 {
     public GameObject Player;
     public float speed;
+    public float distanceBetween;
 
     private float distance;
     void Start()
@@ -21,7 +22,13 @@ public class AIMovement : MonoBehaviour
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        transform.position = Vector2.MoveTowards(this.transform.position, Player.transform.position, speed * Time.deltaTime);
-        transform.rotation = Quaternion.Euler(Vector3.forward * (angle - 90.0f));
+        if(distance < distanceBetween)
+        {
+            transform.position = Vector2.MoveTowards(this.transform.position, Player.transform.position, speed * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(Vector3.forward * (angle - 90.0f));
+        }
+      
+
+
     }
 }
