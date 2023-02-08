@@ -59539,6 +59539,10 @@ PrefabInstance:
       value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8821275181872905992, guid: b418a635a24c38d4faea86bd13269c44, type: 3}
+      propertyPath: R35Bullet
+      value: 
+      objectReference: {fileID: 7201381173989894463, guid: 9710b271b5f4b5c478bc37f1c44cccda, type: 3}
+    - target: {fileID: 8821275181872905992, guid: b418a635a24c38d4faea86bd13269c44, type: 3}
       propertyPath: TurretSpeed
       value: 60
       objectReference: {fileID: 0}
@@ -59550,6 +59554,10 @@ PrefabInstance:
       propertyPath: RotationSpeed
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 8821275181872905992, guid: b418a635a24c38d4faea86bd13269c44, type: 3}
+      propertyPath: ShootingPosition
+      value: 
+      objectReference: {fileID: 1712991060}
     - target: {fileID: 8821275181872905994, guid: b418a635a24c38d4faea86bd13269c44, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
       value: -0.21916097
@@ -59664,7 +59672,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8821275181872905995, guid: b418a635a24c38d4faea86bd13269c44, type: 3}
+    - {fileID: 8821275180924331633, guid: b418a635a24c38d4faea86bd13269c44, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b418a635a24c38d4faea86bd13269c44, type: 3}
+--- !u!4 &1712991060 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8821275181025020161, guid: b418a635a24c38d4faea86bd13269c44, type: 3}
+  m_PrefabInstance: {fileID: 1712991059}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1744792775
 PrefabInstance:
   m_ObjectHideFlags: 0
