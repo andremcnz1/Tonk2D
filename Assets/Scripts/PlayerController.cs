@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float RotationSpeed = 10.0f;
     public float Acceleration = 1.5f;
     public float Deceleration = 8.0f;
     public float MaxSpeed = 1.0f;
     public float TurretSpeed = 50.0f;
+    public float BulletSpeed = 3.0f;
     public Transform Turret;
+
+    public Transform ShootingPosition;
+    public GameObject R35Bullet;
 
     private Vector3 CurrentSpeed;
     private float Rotation;
@@ -27,6 +31,11 @@ public class TankMovement : MonoBehaviour
         MousePos = Input.mousePosition;
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
     }
 
     void FixedUpdate()
@@ -59,5 +68,12 @@ public class TankMovement : MonoBehaviour
         float angle = Mathf.Atan2(MousePos.y, MousePos.x) * Mathf.Rad2Deg;
         Quaternion target = Quaternion.AngleAxis(angle - 90f, Vector3.forward);
         Turret.rotation = Quaternion.RotateTowards(Turret.rotation, target, Time.deltaTime * TurretSpeed);
+    }
+
+    private void Shoot()
+    {
+        GameObject Bullet = Instantiate(R35Bullet, ShootingPosition.position, ShootingPosition.rotation);
+        Rigidbody2D rb = Bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(ShootingPosition.up * BulletSpeed, ForceMode2D.Impulse);
     }
 }
