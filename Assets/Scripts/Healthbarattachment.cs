@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Healthbarattachment : MonoBehaviour
 {
@@ -25,7 +26,8 @@ public class Healthbarattachment : MonoBehaviour
 
     private void Update()
     {
-        healthBar.transform.position = gameObject.transform.position;
+        healthBar.transform.position = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+        // healthBar.transform.position = gameObject.transform.position;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
