@@ -27,14 +27,13 @@ public class Healthbarattachment : MonoBehaviour
     private void Update()
     {
         healthBar.transform.position = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-        // healthBar.transform.position = gameObject.transform.position;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name.Contains("Shell"))
         {
-            if (collision.gameObject.GetComponent<bullet>().parent != gameObject)
+            if (collision.gameObject.GetComponent<bullet>().GetParent() != gameObject)
             {
                 TakeDamage(20);
             }

@@ -10,10 +10,13 @@ public class PlayerController : MonoBehaviour
     public float MaxSpeed = 1.0f;
     public float TurretSpeed = 50.0f;
     public float BulletSpeed = 4.0f;
+    public float FiringRateDelay = 1.5f;
     public Transform Turret;
 
     public Transform ShootingPosition;
     public GameObject R35Bullet;
+
+    private float FiringRateTime = 0.0f;
 
     private Vector3 CurrentSpeed;
     private float Rotation;
@@ -32,10 +35,13 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && FiringRateTime >= FiringRateDelay)
         {
             Shoot();
+            FiringRateTime = 0f;
         }
+
+        FiringRateTime += Time.deltaTime;
     }
 
     void FixedUpdate()

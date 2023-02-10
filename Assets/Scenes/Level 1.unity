@@ -59315,7 +59315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8821275181872905992, guid: b418a635a24c38d4faea86bd13269c44, type: 3}
       propertyPath: RotationSpeed
-      value: 14
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8821275181872905992, guid: b418a635a24c38d4faea86bd13269c44, type: 3}
       propertyPath: ShootingPosition
