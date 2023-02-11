@@ -58963,13 +58963,12 @@ MonoBehaviour:
   MaxSpeed: 1.2
   TurretSpeed: 60
   FiringRateDelay: 1.5
-  ShootingPosition: {fileID: 1303731037}
   Player: {fileID: 1712991061}
-  FirePosition: {fileID: 1303731037}
   speed: 0.3
   distanceBetween: 3
   Turret: {fileID: 1096684487}
   R35Bullet: {fileID: 7201381173989894463, guid: 9710b271b5f4b5c478bc37f1c44cccda, type: 3}
+  FiringPosition: {fileID: 1303731037}
   BulletSpeed: 4
 --- !u!1 &519420028
 GameObject:
@@ -59389,13 +59388,12 @@ MonoBehaviour:
   MaxSpeed: 1.2
   TurretSpeed: 60
   FiringRateDelay: 1.5
-  ShootingPosition: {fileID: 1712991060}
   Player: {fileID: 1712991061}
-  FirePosition: {fileID: 1712991060}
   speed: 0.3
   distanceBetween: 3
   Turret: {fileID: 1167456599}
   R35Bullet: {fileID: 7201381173989894463, guid: 9710b271b5f4b5c478bc37f1c44cccda, type: 3}
+  FiringPosition: {fileID: 1712991060}
   BulletSpeed: 4
 --- !u!1001 &1744792775
 PrefabInstance:
