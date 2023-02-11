@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8164367581841935024}
   - component: {fileID: 8164367581841935027}
-  - component: {fileID: 8164367581841935025}
   m_Layer: 0
   m_Name: R35 Turret
   m_TagString: Untagged
@@ -84,22 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8164367581841935025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8164367581841935031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d6c33f6547e3f54b8e76daa3a1f9bb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  info: {fileID: 8164367582365788046}
-  ShootingPosition: {fileID: 8164367582959130615}
-  R35Bullet: {fileID: 7201381173989894463, guid: 9710b271b5f4b5c478bc37f1c44cccda, type: 3}
-  BulletForce: 8
 --- !u!1 &8164367582365788034
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,13 +92,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8164367582991233888}
-  - component: {fileID: 8164367582365788045}
   - component: {fileID: 8164367582365788044}
   - component: {fileID: 8164367582365788035}
-  - component: {fileID: 8164367582365788046}
+  - component: {fileID: 438683688}
+  - component: {fileID: 438683689}
   m_Layer: 0
   m_Name: Renault R35
-  m_TagString: LocalPlayer
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,25 +119,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8164367582365788045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8164367582365788034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61934409ff856fe44a127064e2b3b74f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  info: {fileID: 8164367582365788046}
-  RotationSpeed: 10
-  Acceleration: 1.5
-  Deceleration: 8
-  MaxSpeed: 1
-  TurretSpeed: 50
-  Turret: {fileID: 8164367581841935024}
 --- !u!50 &8164367582365788044
 Rigidbody2D:
   serializedVersion: 4
@@ -213,7 +177,7 @@ PolygonCollider2D:
       - {x: 0.09980449, y: -0.41787887}
       - {x: 0.18100172, y: -0.41787884}
       - {x: 0.1792106, y: 0.4133206}
---- !u!114 &8164367582365788046
+--- !u!114 &438683688
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -222,11 +186,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 8164367582365788034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 267811324b932864eb9dfd144e822042, type: 3}
+  m_Script: {fileID: 11500000, guid: c3528a58c9dea9c478ac045e215765c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 0
-  Tag: 
+  maxHealth: 100
+  healthBarPrefab: {fileID: 2612782670122359158, guid: ae667381585171a47803c9b4245b6e95, type: 3}
+  canvas: {fileID: 0}
+--- !u!114 &438683689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164367582365788034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4948d896453d15849af9f159979d0dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  R35Bullet: {fileID: 7201381173989894463, guid: 9710b271b5f4b5c478bc37f1c44cccda, type: 3}
+  Turret: {fileID: 8164367581841935031}
+  FirePosition: {fileID: 8164367582959130615}
+  speed: 0.3
+  distanceBetween: 3
+  BulletSpeed: 4
 --- !u!1 &8164367582606924497
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,6 @@ public class Healthbarattachment : MonoBehaviour
     [SerializeField] private GameObject canvas;
 
     private healthbar healthBar;
-
     private int currentHealth;
 
     private void Awake()
@@ -39,7 +38,7 @@ public class Healthbarattachment : MonoBehaviour
     {
         if (collision.gameObject.name.Contains("Shell"))
         {
-            if (collision.gameObject.GetComponent<bullet>().GetParent() != gameObject)
+            if (collision.gameObject.GetComponent<Bullet>().GetParent() != gameObject)
             {
                 TakeDamage(20);
             }

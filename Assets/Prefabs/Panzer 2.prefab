@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8821275180924331635}
   - component: {fileID: 8821275180924331634}
-  - component: {fileID: 8821275180924331633}
   m_Layer: 0
   m_Name: Pz 2 Turret
   m_TagString: Untagged
@@ -84,22 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8821275180924331633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8821275180924331636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d6c33f6547e3f54b8e76daa3a1f9bb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  info: {fileID: 8821275181872905995}
-  ShootingPosition: {fileID: 8821275181025020161}
-  R35Bullet: {fileID: 7201381173989894463, guid: 9710b271b5f4b5c478bc37f1c44cccda, type: 3}
-  BulletForce: 2
 --- !u!1 &8821275181025020162
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +207,7 @@ GameObject:
   - component: {fileID: 8821275181872905992}
   - component: {fileID: 8821275181872905993}
   - component: {fileID: 8821275181872905994}
-  - component: {fileID: 8821275181872905995}
+  - component: {fileID: 1712991062}
   m_Layer: 0
   m_Name: Panzer 2
   m_TagString: LocalPlayer
@@ -260,13 +243,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61934409ff856fe44a127064e2b3b74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: {fileID: 8821275181872905995}
-  RotationSpeed: 10
-  Acceleration: 1.5
+  RotationSpeed: 20
+  Acceleration: 1
   Deceleration: 8
-  MaxSpeed: 1
-  TurretSpeed: 50
+  MaxSpeed: 1.2
+  TurretSpeed: 60
+  BulletSpeed: 4
+  FiringRateDelay: 1.5
   Turret: {fileID: 8821275180924331635}
+  ShootingPosition: {fileID: 8821275181025020161}
+  R35Bullet: {fileID: 7201381173989894463, guid: 9710b271b5f4b5c478bc37f1c44cccda, type: 3}
 --- !u!50 &8821275181872905993
 Rigidbody2D:
   serializedVersion: 4
@@ -313,15 +299,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.81275326, y: 0.33667183}
-      - {x: -0.81129766, y: -0.6516577}
-      - {x: -0.73688155, y: -0.65188235}
-      - {x: -0.736757, y: -0.6228123}
-      - {x: -0.45184964, y: -0.62555474}
-      - {x: -0.45065475, y: -0.6533837}
-      - {x: -0.38207984, y: -0.65228224}
-      - {x: -0.37682498, y: 0.34121346}
---- !u!114 &8821275181872905995
+    - - {x: -0.21916097, y: 0.46574497}
+      - {x: -0.21774346, y: -0.53023994}
+      - {x: -0.1408369, y: -0.529352}
+      - {x: -0.13975763, y: -0.5000441}
+      - {x: 0.14207208, y: -0.502074}
+      - {x: 0.14193901, y: -0.52857494}
+      - {x: 0.21582581, y: -0.5286888}
+      - {x: 0.21433488, y: 0.4678542}
+--- !u!114 &1712991062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330,8 +316,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8821275181872905997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 267811324b932864eb9dfd144e822042, type: 3}
+  m_Script: {fileID: 11500000, guid: c3528a58c9dea9c478ac045e215765c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 0
-  Tag: 
+  maxHealth: 100
+  healthBarPrefab: {fileID: 2612782670122359158, guid: ae667381585171a47803c9b4245b6e95, type: 3}
+  canvas: {fileID: 0}

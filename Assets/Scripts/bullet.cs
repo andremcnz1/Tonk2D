@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
-public class bullet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public GameObject BulletExplosion;
 
