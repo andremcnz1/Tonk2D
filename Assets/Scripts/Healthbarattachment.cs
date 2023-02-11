@@ -27,6 +27,12 @@ public class Healthbarattachment : MonoBehaviour
     private void Update()
     {
         healthBar.transform.position = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+    
+        if(currentHealth <= 0)
+        {
+            Destroy(gameObject);
+            Destroy(healthBar.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

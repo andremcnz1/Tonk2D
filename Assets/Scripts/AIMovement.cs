@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class AIMovement : MonoBehaviour
 {
-    public GameObject Player;
-    public float speed;
-    public float distanceBetween;
-    public float BulletSpeed = 4.0f;
-    public GameObject R35Bullet;
+    [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject R35Bullet;
+    [SerializeField] private GameObject Turret;
+    [SerializeField] private float speed;
+    [SerializeField] private float distanceBetween;
+    [SerializeField] private float BulletSpeed = 4.0f;
 
     private float distance;
     void Start()
