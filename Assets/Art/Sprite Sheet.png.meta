@@ -51,7 +51,7 @@ TextureImporter:
       213: 2312337393431253452
     second: Sprite Sheet_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -110,6 +111,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -125,6 +127,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -484,6 +510,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Sprite Sheet_8: -57799744575800749
+      Sprite Sheet_9: -2583955778842732011
+      Sprite Sheet_5: 8664507672882963953
+      Sprite Sheet_7: -5473188441428621714
+      Sprite Sheet_15: 2312337393431253452
+      Sprite Sheet_4: 2165151032917842225
+      Sprite Sheet_11: 6177976602071403436
+      Sprite Sheet_14: 4204346479326554023
+      Sprite Sheet_6: -8783674610116729583
+      Sprite Sheet_2: -7954658308581492485
+      Sprite Sheet_10: -4538432373073829682
+      Sprite Sheet_0: 6076045283706875241
+      Sprite Sheet_1: -8878924802812445402
+      Sprite Sheet_13: -332661014414710779
+      Sprite Sheet_12: -8850067798136526029
+      Sprite Sheet_3: -3511164465282743847
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -11,7 +11,7 @@ public enum CharacterType
     AI
 };
 
-[CustomEditor(typeof(TankController))]
+[CustomEditor(typeof(Editor))]
 public class TankController : MonoBehaviour
 {
     private CharacterType characterType;
