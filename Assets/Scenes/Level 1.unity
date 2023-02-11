@@ -58973,10 +58973,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1712991061}
+  R35Bullet: {fileID: 7201381173989894463, guid: 9710b271b5f4b5c478bc37f1c44cccda, type: 3}
+  Turret: {fileID: 0}
   speed: 0.3
   distanceBetween: 3
   BulletSpeed: 4
-  R35Bullet: {fileID: 7201381173989894463, guid: 9710b271b5f4b5c478bc37f1c44cccda, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -59536,6 +59537,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8164367582365788046, guid: d1d91870e19ae814995dd7873b74c9bc, type: 3}
     - {fileID: 8164367582365788045, guid: d1d91870e19ae814995dd7873b74c9bc, type: 3}
+    - {fileID: 8164367581841935025, guid: d1d91870e19ae814995dd7873b74c9bc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d1d91870e19ae814995dd7873b74c9bc, type: 3}
 --- !u!1 &1873259144
 GameObject:
