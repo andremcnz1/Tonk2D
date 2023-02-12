@@ -13,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Unit
   - 
   - 
   - 
@@ -42,6 +42,21 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Terrain
+    uniqueID: 1631669345
+    locked: 0
+  - name: Terrain Cosmetics
+    uniqueID: 1770440191
+    locked: 0
+  - name: Obstacles
+    uniqueID: 4231227013
+    locked: 0
+  - name: Buildings
+    uniqueID: 1898706485
+    locked: 0
+  - name: Units
+    uniqueID: 3631988355
     locked: 0
   - name: UI
     uniqueID: 173912605

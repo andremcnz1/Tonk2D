@@ -37,10 +37,10 @@ public class TankController : MonoBehaviour
     [System.Serializable]
     public class AIInfo
     {
-        [SerializeField] public GameObject Player;     // Conditional show/hide in inspector 
         [SerializeField] public float speed;           // Conditional show/hide in inspector 
         [SerializeField] public float distanceBetween; // Conditional show/hide in inspector 
 
+        [NonSerialized] public GameObject Player;     // Conditional show/hide in inspector 
         [NonSerialized] public float distance;
     }
 
@@ -68,10 +68,16 @@ public class TankController : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        playerInfo.CurrentSpeed = Vector3.zero;
+        if (characterType == CharacterType.Player)
+        {
+            playerInfo.CurrentSpeed = Vector3.zero;
+        }
+        else if(characterType == CharacterType.AI)
+        {
+            aiInfo.Player = GameObject.FindGameObjectWithTag("LocalPlayer");
+        }
     }
 
     void Update()

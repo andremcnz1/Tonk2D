@@ -7,13 +7,14 @@ public class Healthbarattachment : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private GameObject healthBarPrefab;
-    [SerializeField] private GameObject canvas;
 
+    private GameObject canvas;
     private healthbar healthBar;
     private int currentHealth;
 
     private void Awake()
     {
+        canvas = FindObjectOfType<Canvas>().gameObject;
         healthBar = Instantiate(healthBarPrefab, canvas.transform).GetComponent<healthbar>();
     }
 
